@@ -32,3 +32,15 @@ Thumbs.db
 # Arquivos temporários do Office/LibreOffice
 ~$*
 .~lock.*#
+
+# Documentos: só o README.md vai para o repositório
+*.md
+!README.md
+*.pdf
+*.pptx
+*.ppt
+*.docx
+*.doc
+*.odt
+*.odp
+*.xlsx
