@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Protótipo do Cidade Missão 3.0 — mapa estratégico de São Paulo. Dados fictícios." />
+    <title>Cidade Missão 3.0 · protótipo (dados fictícios)</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M12 2h16l10 10v16L28 38H12L2 28V12z' fill='%231C1710' stroke='%23C9A15E' stroke-width='2'/%3E%3Cpath d='M20 9l3 8h-6zM20 31l-3-8h6zM9 20l8-3v6zM31 20l-8 3v-6z' fill='%23E2C27E'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- fontes (Gloock, Alegreya Sans, Alegreya Sans SC) são injetadas depois do primeiro desenho do mapa: src/map/MapView.tsx -->
+    <!-- dados carregados em paralelo com o JavaScript (primeira interação no celular) -->
+    <link rel="preload" href="/dados/sp_distritos_ficticio.geojson" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/dados/cidade_missao_ficticio.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/dados/sp_subprefeituras.geojson" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/dados/fundo_esquematico.json" as="fetch" crossorigin="anonymous" />
+    <style>.carregando{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#111916;color:#EFE8D8;font-family:'Alegreya Sans',system-ui,sans-serif}</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

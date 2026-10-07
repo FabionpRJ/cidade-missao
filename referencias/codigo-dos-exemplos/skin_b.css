@@ -1,0 +1,99 @@
+/* Direção B — Central de Operações: concreto aparente, sinalização do Metrô e placas de rua, sala de controle. Cantos retos, grade técnica, placas brancas. */
+:root{
+  color-scheme:dark;
+  --f-disp:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
+  --f-ui:'Barlow','Segoe UI',system-ui,sans-serif;
+  --f-sc:'Barlow Condensed','Arial Narrow',sans-serif;
+  --f-num:'Barlow Condensed','Arial Narrow',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --concrete:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .8  0 0 0 0 .82  0 0 0 0 .85  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  --forma:repeating-linear-gradient(0deg,rgba(255,255,255,0) 0 47px,rgba(255,255,255,.035) 47px 48px);
+  --ticks:linear-gradient(#F2F4F5,#F2F4F5) top left/10px 2px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) top left/2px 10px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) top right/10px 2px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) top right/2px 10px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) bottom left/10px 2px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) bottom left/2px 10px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) bottom right/10px 2px no-repeat,linear-gradient(#F2F4F5,#F2F4F5) bottom right/2px 10px no-repeat;
+  --bg:#0D0F11;--s0:#111417;--s1:#171B1F;--s2:#1E2328;--s3:#283038;
+  --line:#2C343C;--line2:#4A545E;
+  --tx:#ECEFF1;--tx2:#A9B3BC;--tx3:#8A95A0;
+  --acc:#F2F4F5;--acc-tx:#0D0F11;--acc-link:#7FD3FF;--focus:#7FD3FF;
+  --ok:#2FC98A;--on-ok:#06140D;--warn:#FFD400;--on-warn:#111111;--info:#5B95F7;--neg:#FF6B5E;
+  --t-fis:#FF8A1F;--t-int:#6E8DFF;--t-mil:#22C17F;--on-track:#0D0F11;
+  --map-land:#14171A;
+  --r:0;--r-sm:0;--r-round:0;--r-pill:2px;--r-badge:0;--r-dot:0;--r-rail:0;--r-mode:0;--r-act:0;--r-btn:0;--r-search:0;--r-fab:0;--r-sheet:0;--r-trait:0;
+  --bw:1px;
+  --top-bg:var(--concrete),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/24px 24px,#111417;
+  --rail-bg:var(--concrete),#0D0F11;
+  --panel-bg:var(--concrete),var(--forma),#14181B;
+  --panel-sh:8px 0 24px rgba(0,0,0,.55);
+  --head-bg:#0A0B0D;--head-tx:#FFFFFF;
+  --rail-b-bg:#171B1F;--rail-b-border:#3A434C;--rail-sel-bg:#F2F4F5;--rail-sel-tx:#0D0F11;--rail-sel-sh:none;
+  --float-bg:var(--ticks),var(--concrete),rgba(17,20,23,.96);
+  --float-sh:0 0 0 1px #000,0 10px 26px rgba(0,0,0,.55);
+  --kpi-bg:#101316;--kpi-border:#2F373F;--kpi-ic:#F2F4F5;
+  --kpi-font:600 36px var(--f-num);
+  --res-font:600 20px var(--f-num);--res-ic:#A9B3BC;
+  --label-font:600 11.5px var(--f-sc);--label-ls:.1em;--label-tt:uppercase;
+  --eyebrow-font:600 12.5px var(--f-sc);--eyebrow-ls:.1em;--eyebrow-tt:uppercase;
+  --h2-font:700 38px var(--f-disp);--h2-ls:.02em;--h2-tt:uppercase;--h3-font:700 26px var(--f-disp);
+  --tab-font:600 14px var(--f-sc);--tab-ls:.1em;--tab-tt:uppercase;--tabs-bg:#0F1214;--tab-sel-bg:#1B2025;
+  --blockh-font:600 12.5px var(--f-sc);--blockh-tt:uppercase;
+  --pairh-bg:#0A0B0D;
+  --row-bg:#121518;--row-border:#262D34;--rownum-font:600 17px var(--f-num);
+  --zel-ic:#FF8A1F;--ramp-border:#000;
+  --legend-font:700 19px var(--f-disp);
+  --olh-font:600 14px var(--f-sc);--olh-ls:.1em;--olh-tt:uppercase;--olh-bg:#0A0B0D;
+  --olsel-bg:rgba(242,244,245,.07);--bar-bg:#262D34;--bar-fill:#F2F4F5;--prio-fill:#A97DD8;
+  --mode-bg:#171B1F;--mode-border:#3A434C;--mode-sel-bg:#F2F4F5;--mode-sel-tx:#0D0F11;--mode-sel-sh:none;
+  --mini-border:1px solid #F2F4F5;
+  --date-bg:#0A0B0D;--date-font:700 18px var(--f-disp);
+  --cnt-bg:#F2F4F5;--cnt-tx:#0D0F11;--badge-bg:#FFD400;--badge-tx:#111;
+  --layer-bg:#0A0B0D;--layer-border:#4A545E;
+  --fict-font:600 11px var(--f-mono);--fict-tx:#111;--fict-bg:repeating-linear-gradient(-45deg,#FFD400 0 8px,#E8C000 8px 16px);--fict-border:0;
+  --src-font:400 11px var(--f-mono);
+  --tt-style:dashed;--tt-color:#7FD3FF;--tt-open-bg:rgba(127,211,255,.16);
+  --act-bg:#14181B;--act-border:1px solid #F2F4F5;--act-tx:#F2F4F5;--act-sh:4px 4px 0 #000;--act-sel-bg:#F2F4F5;--act-sel-tx:#0D0F11;
+  --toast-bg:var(--concrete),#14181B;--toast-accent:6px;--toast-font:600 15px var(--f-sc);
+  --alert-bg:var(--concrete),#14181B;--alert-border:2px solid #FFD400;--alert-title:700 23px var(--f-disp);
+  --btn-font:600 14px var(--f-sc);--btn-ls:.08em;--btn-tt:uppercase;--btn-bg:#1B2025;--btn-border:#4A545E;
+  --tip-bg:var(--ticks),var(--concrete),#101316;--tip-border:1px solid #4A545E;--tip-sh:0 0 0 1px #000,0 14px 32px rgba(0,0,0,.65);--tip-title:700 20px var(--f-disp);
+  --chip-bg:#171B1F;--th-font:600 11.5px var(--f-sc);
+  --card-bg:#14181B;--card-border:#2F373F;--card-top:6px;--card-title:600 17px var(--f-disp);
+  --dec-border:1px solid #F2F4F5;--opt-bg:#171B1F;
+  --f-maplabel:var(--f-disp);--maplabel-w:700;--f-mapdist:var(--f-disp);--mapdist-w:600;--mapsel-w:700;--viz-style:normal;
+  --device:#000;--device-edge:#3A434C;--mstatus-bg:#0A0B0D;
+  --sheet-bg:var(--concrete),var(--forma),#14181B;--sheet-border:4px solid #F2F4F5;
+  --msheet-title:700 32px var(--f-disp);--mbig-font:600 50px var(--f-num);
+  --cta-font:700 17px var(--f-sc);--cta-sh:4px 4px 0 #000;
+  --nav-bg:#0A0B0D;--nav-sel:#FFFFFF;--nav-sel-ic:#FFD400;
+  --ficha-bg:#111417;--appbar-font:700 22px var(--f-disp);--lvl-font:700 19px var(--f-num);--ficha-name:700 30px var(--f-disp);--attr-font:600 27px var(--f-num);
+  --trait-bg:#0A0B0D;--trait-border:#4A545E;
+  --board-bg:var(--concrete),#111417;--brand-font:700 19px var(--f-disp);--brand-ls:.06em;
+}
+/* placa de linha do metrô no cabeçalho, grade técnica, listras de atenção */
+.dr-head{background:#0A0B0D;padding-left:22px}
+.dr-head .line-strip{position:absolute;left:0;top:0;bottom:0;width:8px;background:#FFD54A}
+.ledger .dr-head .line-strip{background:#A97DD8}
+.dc-head .line-strip{position:absolute;left:0;top:0;bottom:0;width:8px;background:#FFD400}
+.dr-title{text-align:left}
+.icon-btn.round{background:#171B1F}
+.kpi b{letter-spacing:.01em}
+.cm-top{border-bottom:2px solid #F2F4F5}
+.brand-t b{text-transform:uppercase}
+.res{border-left:1px solid #2C343C}
+.cm-alert{border-left-width:0;padding-left:26px}
+.cm-alert::before{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:repeating-linear-gradient(-45deg,#FFD400 0 8px,#111 8px 16px)}
+.al-ic{background:#FFD400;color:#111}
+.al-body small{color:#FFD400}
+.toast{border-left-style:solid}
+.toast.warn{border-left-color:#FFD400}
+.tab.is-sel{box-shadow:inset 0 -4px 0 #FFD400;color:#fff}
+.rail-b.is-sel{box-shadow:inset 4px 0 0 #FFD400}
+.mode-b.is-sel{box-shadow:inset 0 -4px 0 #FFD400}
+.tl-m.is-sel .tl-tick{background:#FFD400;box-shadow:0 0 0 3px #111417,0 0 0 4px #FFD400}
+.tl-ev{background:#FFD400;border-radius:0}
+.ms-state.st-run{background:#F2F4F5;color:#0D0F11}
+.mission{border-top-width:6px}
+.m-cta{border:2px solid #000!important}
+.m-sheet{border-top:4px solid #F2F4F5}
+.f-track{font-family:var(--f-sc);text-transform:uppercase;letter-spacing:.06em}
+.lbl-dist,.lbl-sub{text-transform:uppercase}
+.node{border-radius:0}
+.code{color:#FFD400}
+.sh-big b,.kpi b{font-feature-settings:"tnum"}

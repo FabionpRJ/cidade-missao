@@ -1,0 +1,97 @@
+/* Tokens da Direção A — Gabinete Paulistano (pacote A §2 / skin_a.css): latão, jacarandá e couro verde.
+   Escuro é o padrão. Os tokens semânticos no fim (--hi, --orn, --head-*…) concentram o que antes era cor fixa. */
+:root {
+  color-scheme: dark;
+  --f-disp: 'Gloock', Georgia, 'Times New Roman', serif;
+  --f-ui: 'Alegreya Sans', 'Segoe UI', system-ui, sans-serif;
+  --f-sc: 'Alegreya Sans SC', 'Alegreya Sans', system-ui, sans-serif;
+  --f-num: 'Alegreya Sans', system-ui, sans-serif;
+  --f-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .92  0 0 0 0 .75  0 0 0 .055 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  --wood: var(--grain), repeating-linear-gradient(92deg, rgba(0,0,0,0) 0 7px, rgba(0,0,0,.08) 7px 9px), linear-gradient(180deg, #2A2017, #17120C);
+  --bg: #0B1210; --s0: #0F1916; --s1: #15211D; --s2: #1C2B26; --s3: #26372F;
+  --line: #2C3D35; --line2: #6E5A38;
+  --tx: #EFE8D8; --tx2: #BDB6A2; --tx3: #958F7B;
+  --acc: #C9A15E; --acc-tx: #14100A; --acc-link: #E0C080; --focus: #F1D79A;
+  --ok: #8CC79B; --on-ok: #0E1A12; --warn: #E8B04E; --on-warn: #1A1205; --info: #8FB5DB; --neg: #E58C6E;
+  --t-fis: #E8A33A; --t-int: #93A4F2; --t-mil: #66C886; --on-track: #11140F;
+  --map-land: #111916;
+  --r: 3px; --r-sm: 2px; --r-round: 50%; --r-pill: 999px; --r-badge: 999px; --r-dot: 50%; --r-rail: 50%; --r-mode: 18px; --r-act: 50%; --r-btn: 2px; --r-search: 4px; --r-fab: 50%; --r-sheet: 14px; --r-trait: 2px;
+  --bw: 1px;
+  --top-bg: var(--wood);
+  --rail-bg: var(--grain), linear-gradient(90deg, #1E1810, #120E09);
+  --panel-bg: var(--grain), linear-gradient(180deg, #14201C, #0F1916);
+  --panel-sh: inset 0 0 0 3px #0F1916, inset 0 0 0 4px rgba(201,161,94,.28), 6px 0 22px rgba(0,0,0,.55);
+  --head-bg: var(--wood); --head-tx: #F5E6C2;
+  --rail-b-bg: radial-gradient(circle at 35% 30%, #2D3D36, #121C18 72%); --rail-b-border: #8E7449;
+  --rail-sel-bg: radial-gradient(circle at 35% 30%, #5A4628, #21190E 75%); --rail-sel-tx: #F8E3AE;
+  --rail-sel-sh: 0 0 0 2px #0F1916, 0 0 0 3px #C9A15E, 0 0 16px rgba(201,161,94,.35);
+  --float-bg: var(--grain), linear-gradient(180deg, rgba(21,33,29,.97), rgba(15,25,22,.97));
+  --float-sh: inset 0 0 0 2px #0F1916, inset 0 0 0 3px rgba(201,161,94,.22), 0 0 0 1px #000, 0 12px 30px rgba(0,0,0,.6);
+  --kpi-bg: linear-gradient(180deg, #19261F, #121C18); --kpi-border: #3A4A3F; --kpi-ic: #C9A15E;
+  --kpi-font: 400 31px var(--f-disp);
+  --res-font: 700 17px var(--f-num); --res-ic: #C9A15E;
+  --label-font: 500 12px var(--f-sc); --label-ls: .05em; --label-tt: none;
+  --eyebrow-font: 500 13px var(--f-sc);
+  --h2-font: 400 35px var(--f-disp); --h2-ls: .005em; --h2-tt: none; --h3-font: 400 25px var(--f-disp);
+  --tab-font: 500 15px var(--f-sc); --tab-ls: .03em; --tab-tt: none; --tabs-bg: #111A16; --tab-sel-bg: linear-gradient(180deg, rgba(201,161,94,0), rgba(201,161,94,.14));
+  --blockh-font: 500 13.5px var(--f-sc);
+  --pairh-bg: var(--wood);
+  --row-bg: #121C18; --row-border: #26352E; --rownum-font: 700 14px var(--f-num);
+  --zel-ic: #E8B04E; --ramp-border: #050807;
+  --legend-font: 400 19px var(--f-disp);
+  --olh-font: 500 14.5px var(--f-sc); --olh-ls: .02em; --olh-tt: none; --olh-bg: linear-gradient(90deg, rgba(201,161,94,.16), rgba(201,161,94,0) 70%);
+  --olsel-bg: rgba(201,161,94,.12); --bar-bg: #24312B; --bar-fill: #C9A15E; --prio-fill: #9C82C4;
+  --mode-bg: radial-gradient(circle at 40% 30%, #26352E, #121C18); --mode-border: #6E5A38; --mode-sel-bg: radial-gradient(circle at 40% 30%, #5A4628, #21190E); --mode-sel-tx: #F8E3AE; --mode-sel-sh: 0 0 12px rgba(201,161,94,.45);
+  --mini-border: 2px solid #8E7449;
+  --date-bg: #15110C; --date-font: 400 17px var(--f-disp);
+  --cnt-bg: #C9A15E; --cnt-tx: #14100A; --badge-bg: #E8B04E; --badge-tx: #1A1205;
+  --layer-bg: rgba(201,161,94,.10); --layer-border: #6E5A38;
+  --fict-font: 700 10.5px var(--f-ui); --fict-tx: #F6DEA6; --fict-bg: repeating-linear-gradient(-45deg, #3A2A10 0 6px, #2B1F0B 6px 12px); --fict-border: 1px solid #8E7449;
+  --src-font: 400 11.5px var(--f-ui);
+  --tt-style: dotted; --tt-color: #C9A15E; --tt-open-bg: rgba(201,161,94,.2);
+  --act-bg: radial-gradient(circle at 35% 30%, #3B4A42, #16211D 70%); --act-border: 2px solid #B8955A; --act-tx: #F0E2C0; --act-sh: 0 0 0 3px #0B1210, 0 0 0 4px #4A3C25, 0 8px 16px rgba(0,0,0,.6); --act-sel-bg: radial-gradient(circle at 35% 30%, #7A6138, #2A2112); --act-sel-tx: #FFF0CC;
+  --toast-bg: var(--grain), linear-gradient(180deg, #18241F, #111A17); --toast-accent: 3px; --toast-font: 700 13.5px var(--f-ui);
+  --alert-bg: var(--grain), linear-gradient(180deg, #2C2315, #17130C); --alert-border: 1px solid #C9A15E; --alert-title: 400 21px var(--f-disp);
+  --btn-font: 700 13px var(--f-ui); --btn-ls: .01em; --btn-tt: none; --btn-bg: linear-gradient(180deg, #22302A, #17211D); --btn-border: #6E5A38;
+  --tip-bg: var(--grain), linear-gradient(180deg, #1A2621, #111A17); --tip-border: 1px solid #8E7449; --tip-sh: inset 0 0 0 2px #111A17, inset 0 0 0 3px rgba(201,161,94,.2), 0 0 0 1px #000, 0 16px 36px rgba(0,0,0,.7); --tip-title: 400 20px var(--f-disp);
+  --chip-bg: #16211D; --th-font: 500 12px var(--f-sc);
+  --card-bg: linear-gradient(180deg, #18241F, #121B17); --card-border: #33443B; --card-top: 3px; --card-title: 700 14.5px var(--f-ui);
+  --dec-border: 1px solid #B8955A; --opt-bg: linear-gradient(180deg, #1C2924, #141E1A);
+  --sheet-bg: var(--grain), linear-gradient(180deg, #17231E, #0F1916); --sheet-border: 2px solid #8E7449;
+  --msheet-title: 400 31px var(--f-disp); --mbig-font: 400 46px var(--f-disp);
+  --cta-font: 700 16px var(--f-ui); --cta-sh: 0 0 0 1px #000, 0 6px 16px rgba(0,0,0,.5);
+  --nav-bg: var(--wood); --nav-sel: #F8E3AE; --nav-sel-ic: #C9A15E;
+  --ficha-bg: #0F1916; --appbar-font: 400 22px var(--f-disp); --lvl-font: 400 18px var(--f-disp); --ficha-name: 400 28px var(--f-disp);
+  --trait-bg: var(--wood); --trait-border: #6E5A38;
+  --brand-font: 400 19px var(--f-disp); --brand-ls: .005em; --brand-tt: none;
+
+  /* ---- tokens semânticos (o que muda de uma direção para outra) ---- */
+  --hi: #C9A15E;            /* destaque: seleção, marcos, foco da temporada */
+  --hi-tx: #14100A;
+  --hi2: #F3D58F;           /* destaque claro: mês atual, vista do minimapa, seleção no mapa */
+  --brass: #8E7449;         /* filete de latão */
+  --head-tx2: #D2C4A0;      /* texto secundário em cabeçalhos de madeira */
+  --head-btn-bg: radial-gradient(circle at 35% 30%, #3A2E1E, #1A140C 75%); --head-btn-tx: #E8D8B0; --head-btn-border: #8E7449;
+  --sel-mark: inset 0 -2px 0 #C9A15E;          /* aba/modo selecionado */
+  --rail-sel-mark: var(--rail-sel-sh);         /* trilho selecionado */
+  --strip-head: transparent;                    /* placa de linha à esquerda do cabeçalho (direção B) */
+  --strip-alert: linear-gradient(180deg, #C9A15E, #8E7449);  /* faixa do alerta de coordenação */
+  --strip-alert-w: 3px;
+  --orn: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='12' viewBox='0 0 220 12'><path d='M0 6H88M132 6H220' stroke='%238E7449'/><path d='M92 6l6-5 6 5-6 5zM104 6l6-5 6 5-6 5zM116 6l6-5 6 5-6 5z' fill='%23C9A15E'/><path d='M80 3h6M134 3h6M80 9h6M134 9h6' stroke='%236E5A38'/></svg>");
+  --code-display: none;     /* códigos mono nos cabeçalhos (só na direção B) */
+  --head-align: center;     /* título da gaveta centralizado, como placa */
+  --pair-h-tx: #F5E6C2; --pair-h-tx2: #BDB6A2;
+  --warn-tx: #E8B04E;       /* texto de atenção (legível sobre o painel) */
+  --title-sh: 0 1px 0 #000, 0 0 18px rgba(201,161,94,.25);
+  --primary-bg: linear-gradient(180deg, #D8B26C, #B08A4A); --primary-border: #F1D79A;
+
+  /* mapa (renderizador próprio e overlay), theme_a.js */
+  --map-park: #15241C; --map-water: #0B1A24; --map-road: #3A3A2E; --map-street: #3A4A40;
+  --map-label: #EFE3C4; --map-halo: #0B1210; --map-roadlabel: #BFB9A4; --map-viz: #7F7A69; --map-sel-label: #FFF1CF;
+  --map-border: #0B1210; --map-border-op: .85; --map-sub: #D8B978; --map-sub-op: .55; --map-mask: #060A09; --map-mask-op: .55; --map-city: #B8955A;
+  --map-sel: #F3D58F; --map-sel-dark: #2A1E0C; --map-sel-glow: #E2B866; --map-hover: #F3D58F; --map-route-dash: 6 6;
+  --map-mini-view: #F3D58F;
+  --op-far: .82; --op-mid: .72; --op-near: .24;
+  --mono-a: #C9A15E; --mono-b: #6E5A38; --mono-c: #E2C27E; --mono-bg: #1C1710;
+}

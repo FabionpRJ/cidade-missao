@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Direções do Mapa Cidade Missão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Índice das quatro direções: folha neutra que não compete com as propostas. Serifa de título, sans de leitura. */
+:root{--bg:#F1F2EE;--surface:#FFFFFF;--fg:#16191A;--fg2:#4A5154;--fg3:#646C70;--line:#D5D9D6;--accent:#1D4ED8;--mark:#F2D04A;
+--f-disp:'Instrument Serif',Georgia,serif;--f-ui:'Instrument Sans','Segoe UI',system-ui,sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111415;--surface:#191D1F;--fg:#ECEEEC;--fg2:#B3BAB8;--fg3:#8E9694;--line:#2D3335;--accent:#8DB0FF;--mark:#F2D04A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111415;--surface:#191D1F;--fg:#ECEEEC;--fg2:#B3BAB8;--fg3:#8E9694;--line:#2D3335;--accent:#8DB0FF;--mark:#F2D04A;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--f-ui);margin:0}
+.w{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+header.top{padding-block:52px 28px;border-bottom:1px solid var(--line)}
+.kick{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3)}
+h1{font:400 clamp(44px,7vw,84px)/.98 var(--f-disp);margin:10px 0 16px;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:italic}
+.intro{max-width:68ch;color:var(--fg2);font-size:18px;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:var(--fg2)}
+.facts b{color:var(--fg);font-variant-numeric:tabular-nums}
+.fict{display:inline-block;background:var(--mark);color:#16191A;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px}
+section{padding-block:44px;border-bottom:1px solid var(--line)}
+h2{font:400 clamp(30px,3.6vw,42px)/1.05 var(--f-disp);margin:0 0 8px;text-wrap:balance}
+.lead{color:var(--fg2);max-width:70ch;margin:0 0 24px}
+.dirs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:28px}
+.dir{min-width:0}
+.shot{position:relative;display:block;border:1px solid var(--line);background:#000;max-width:100%}
+.shot img{display:block;width:100%;height:auto}
+.shot .cel{position:absolute;right:12px;bottom:-22px;width:21%;border:3px solid #000;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.shot:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.dir-t{display:grid;grid-template-columns:auto 1fr;gap:14px;margin-top:16px;padding-right:24%}
+.let{font:400 46px/1 var(--f-disp);color:var(--fg3)}
+.dir h3{margin:2px 0 4px;font:600 20px var(--f-ui)}
+.dir h3 a{color:var(--fg);text-decoration:none;border-bottom:2px solid var(--accent)}
+.dir h3 a:hover,.dir h3 a:focus-visible{color:var(--accent)}
+.dir p{margin:0;color:var(--fg2);font-size:15px}
+.tw{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line)}
+thead th,tr:first-child th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg3);font-weight:600}
+th[scope=row]{font-weight:600;white-space:nowrap}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.rec{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:start}
+.rec .big{font:400 clamp(26px,3vw,34px)/1.2 var(--f-disp);margin:0 0 14px;text-wrap:balance}
+.rec p{margin:0 0 12px;max-width:62ch}
+.rec aside{background:var(--surface);border:1px solid var(--line);padding:18px 20px}
+.rec aside h3{margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
+.rec aside ul{margin:0;padding-left:18px;color:var(--fg2);font-size:15px}
+.rec aside li{margin-bottom:6px}
+ul.prem{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px}
+ul.prem li{background:var(--surface);border:1px solid var(--line);padding:14px 16px;font-size:14.5px;color:var(--fg2)}
+ul.prem b{display:block;color:var(--fg);margin-bottom:3px}
+.files{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.files div{border-top:2px solid var(--fg);padding-top:10px}
+.files b{display:block}
+.files span{color:var(--fg2);font-size:14.5px}
+footer{padding-block:28px 60px;color:var(--fg3);font-size:13.5px}
+a{color:var(--accent)}
+@media (max-width:820px){.rec{grid-template-columns:1fr}.dir-t{padding-right:0;margin-top:30px}}
+</style>
+</head><body><header class="top"><div class="w">
+  <div class="kick">Cidade Missão · mapa estratégico · São Paulo</div>
+  <h1>Quatro direções para o <em>gabinete de operações</em></h1>
+  <p class="intro">Cada direção tem uma página própria com as quatro telas pedidas (duas de computador, duas de celular), uma prancha de componentes e estados, os tokens, o estilo do Google Maps em JSON, as regras de coropleta e zoom, a especificação dos componentes, acessibilidade, riscos e o pacote pronto para o agente construtor.</p>
+  <div class="facts"><span><b>96</b> distritos e <b>32</b> subprefeituras com limites reais (GeoSampa)</span><span><b>12</b> modos de mapa em 4 famílias</span><span><b>4</b> camadas de acesso</span><span class="fict">todos os números são fictícios</span></div>
+</div></header>
+<section><div class="w"><h2>As direções</h2><p class="lead">Mesmos dados, mesmas telas e mesma estrutura de componentes, para que a comparação seja só de material, tom e tipografia. Clique numa imagem para abrir a direção.</p><div class="dirs"><article class="dir">
+  <a class="shot" href="direcao-a-gabinete-paulistano.html" aria-label="Abrir a direção A, Gabinete Paulistano"><img src="img/dir-a.jpg" width="960" height="540" alt="Tela de computador da direção Gabinete Paulistano: Capão Redondo selecionado no modo Presença" loading="lazy"><img class="cel" src="img/dir-a-cel.jpg" width="195" height="422" alt="" loading="lazy"></a>
+  <div class="dir-t"><span class="let">A</span><div><h3><a href="direcao-a-gabinete-paulistano.html">Gabinete Paulistano</a></h3><p>Latão, jacarandá e couro verde: a mesa de despacho de um gabinete art déco, redesenhada para 2026.</p></div></div>
+</article><article class="dir">
+  <a class="shot" href="direcao-b-central-de-operacoes.html" aria-label="Abrir a direção B, Central de Operações"><img src="img/dir-b.jpg" width="960" height="540" alt="Tela de computador da direção Central de Operações: Capão Redondo selecionado no modo Presença" loading="lazy"><img class="cel" src="img/dir-b-cel.jpg" width="195" height="422" alt="" loading="lazy"></a>
+  <div class="dir-t"><span class="let">B</span><div><h3><a href="direcao-b-central-de-operacoes.html">Central de Operações</a></h3><p>Concreto aparente, placas brancas e a sinalização do Metrô: a sala de controle da cidade.</p></div></div>
+</article><article class="dir">
+  <a class="shot" href="direcao-c-atlas-civico.html" aria-label="Abrir a direção C, Atlas Cívico"><img src="img/dir-c.jpg" width="960" height="540" alt="Tela de computador da direção Atlas Cívico: Capão Redondo selecionado no modo Presença" loading="lazy"><img class="cel" src="img/dir-c-cel.jpg" width="195" height="422" alt="" loading="lazy"></a>
+  <div class="dir-t"><span class="let">C</span><div><h3><a href="direcao-c-atlas-civico.html">Atlas Cívico</a></h3><p>Folhas de atlas sobre o mapa noturno: filetes de tinta, notas de fonte e marca-texto.</p></div></div>
+</article><article class="dir">
+  <a class="shot" href="direcao-d-concreto.html" aria-label="Abrir a direção D, Concreto"><img src="img/dir-d.jpg" width="960" height="540" alt="Tela de computador da direção Concreto: Capão Redondo selecionado no modo Presença" loading="lazy"><img class="cel" src="img/dir-d-cel.jpg" width="195" height="422" alt="" loading="lazy"></a>
+  <div class="dir-t"><span class="let">D</span><div><h3><a href="direcao-d-concreto.html">Concreto</a></h3><p>Concretismo paulista e piso das calçadas: planos chapados, sombras duras e letra larga.</p></div></div>
+</article></div></div></section>
+<section><div class="w"><h2>Elas são realmente diferentes?</h2><p class="lead">A checagem feita antes de desenhar. Nenhum eixo se repete entre duas direções; A e B são as duas escuras, mas uma é quente e ornamental e a outra é fria e técnica.</p><div class="tw"><table><tr><th scope="col"></th><th scope="col">A · Gabinete Paulistano</th><th scope="col">B · Central de Operações</th><th scope="col">C · Atlas Cívico</th><th scope="col">D · Concreto</th></tr><tr><th scope="row">Material</th><td>latão, jacarandá, couro verde</td><td>concreto aparente, placas, grade técnica</td><td>papel cartográfico sobre mesa escura</td><td>planos chapados de cor, sem textura</td></tr><tr><th scope="row">Tom</th><td>solene, institucional</td><td>operacional, de serviço</td><td>editorial, transparente</td><td>mobilizador, enérgico</td></tr><tr><th scope="row">Tipografia</th><td>Gloock + Alegreya Sans (SC)</td><td>Barlow Condensed + Barlow + JetBrains Mono</td><td>Newsreader + Public Sans + IBM Plex Mono</td><td>Archivo variável (largura 62–125)</td></tr><tr><th scope="row">Painéis</th><td>escuros quentes, moldura dupla</td><td>grafite, cantos retos, marcas de canto</td><td>claros, filetes de tinta</td><td>azul-noite, borda creme, sombra dura</td></tr><tr><th scope="row">Forma dos botões</th><td>círculos com anel</td><td>quadrados (placas)</td><td>círculos de papel</td><td>círculo, quadrado e folha alternados</td></tr></table></div></div></section>
+<section><div class="w"><h2>Comparação</h2><p class="lead">Leitura de designer, não medição. “Risco” é o risco de a interface parecer jogo ou propaganda para quem a vê de fora.</p><div class="tw"><table><tr><th scope="col">Critério</th><th scope="col">A · Gabinete Paulistano</th><th scope="col">B · Central de Operações</th><th scope="col">C · Atlas Cívico</th><th scope="col">D · Concreto</th></tr><tr><th scope="row">Identidade</th><td>Forte e institucional; lembra o Victoria 3</td><td>Forte e urbana; muito paulistana</td><td>Sóbria; depende da tipografia</td><td>Muito forte; a mais memorável</td></tr><tr><th scope="row">Legibilidade do mapa</th><td>Boa; latão e Partido próximos</td><td>Muito boa; seleção por placa branca</td><td>Muito boa; painéis separam bem do mapa</td><td>Boa; coropleta saturada exige ajuste</td></tr><tr><th scope="row">Adequação ao celular</th><td>Média; texturas e serifa a simplificar</td><td>Boa; textura opcional</td><td>Boa; painel claro cansa à noite</td><td>Muito boa; sem textura, uma fonte</td></tr><tr><th scope="row">Esforço de construção</th><td>Alto (arte, ornamentos, marcadores)</td><td>Médio</td><td>Médio-baixo</td><td>Baixo</td></tr><tr><th scope="row">Risco de parecer jogo</th><td>Alto</td><td>Médio</td><td>Baixo</td><td>Médio</td></tr><tr><th scope="row">Risco de parecer propaganda</th><td>Baixo</td><td>Baixo</td><td>Muito baixo</td><td>Alto</td></tr><tr><th scope="row">Aderência ao Victoria 3</th><td>Muito alta</td><td>Alta (estrutura igual, material outro)</td><td>Média</td><td>Média</td></tr></table></div></div></section>
+<section><div class="w rec"><div><h2>Recomendação</h2>
+<p class="big">A Central de Operações (B) como base, com o tratamento de fontes e notas do Atlas Cívico (C) na camada Visitante.</p>
+<p>B mantém tudo o que agradou no Victoria 3 (gaveta, trilho, outliner, contadores, minimapa) e troca o material de jogo por um vocabulário que o paulistano já lê no Metrô e nas placas de rua. Passa “organizado e sério” sem parecer palácio nem campanha, e roda bem no celular, porque a textura é opcional.</p>
+<p>A camada pública é onde o partido mais precisa de credibilidade. Ali, as notas de fonte numeradas e a seleção em marca-texto de C reforçam a transparência sem mudar a estrutura.</p>
+<p>A decisão é sua. Se a prioridade for a sensação de “jogo de estratégia”, A entrega mais. Se for alcance no celular e mobilização, D custa menos para construir.</p></div>
+<aside><h3>Se escolher outra</h3><ul><li><b>A</b>: restringir ornamento ao cabeçalho e testar com quem não joga.</li><li><b>C</b>: criar a “folha noturna” antes de usar à noite.</li><li><b>D</b>: reservar os planos de cor para estrutura e reduzir a saturação da coropleta nas camadas Autoridade e Direção.</li></ul></aside></div></section>
+<section><div class="w"><h2>Premissas e o que verificar</h2><ul class="prem"><li><b>Limites oficiais.</b> Os 96 distritos e as 32 subprefeituras vêm do GeoSampa (Prefeitura de São Paulo), na conversão pública github.com/codigourbano/distritos-sp, simplificados a ~120 m. Verificar se a camada está atualizada e qual a licença de uso no GeoSampa antes de produção.</li><li><b>Hidrografia e vias do fundo.</b> Rios, represas, parques e vias desenhados nos exemplos são esquemáticos, traçados à mão. No protótipo real esse fundo é o próprio Google Maps.</li><li><b>Estilo JSON do Google Maps.</b> A propriedade styles da Maps JavaScript API vale para mapas sem mapId. Se o protótipo usar Advanced Markers (que exigem mapId), o estilo tem de ser recriado no Cloud-based maps styling do Console, importando este JSON. Verificar o estado atual dessa regra na documentação do Google.</li><li><b>Termos do Google Maps Platform.</b> Manter logotipo e atribuição do Google visíveis (nenhum painel pode cobri-los de forma permanente), não extrair dados do mapa base e não usar o minimapa com conteúdo do Google. Verificar os termos vigentes.</li><li><b>Indicadores.</b> Todos os números das telas e do pacote são fictícios e estão marcados. Fontes, anos e níveis citados (IBGE 2022, SMS, SME, Seade/IPVS, TSE 2024) indicam onde buscar o dado real; a disponibilidade por distrito de cada um precisa ser verificada.</li><li><b>Marca.</b> A marca usada nos exemplos é um monograma provisório. Não usa logotipo, cores oficiais ou símbolos do Partido Missão, da prefeitura, do Google ou da Paradox.</li></ul></div></section>
+<section><div class="w"><h2>O que foi entregue</h2><div class="files">
+<div><b>4 páginas de direção</b><span>HTML autocontido, abre sem servidor (as fontes vêm do Google Fonts quando há internet).</span></div>
+<div><b>4 pacotes em Markdown</b><span>Um por direção, para colar no agente construtor. O mesmo texto está no fim de cada página.</span></div>
+<div><b>Dados fictícios</b><span>GeoJSON dos 96 distritos com indicadores e série mensal, GeoJSON das 32 subprefeituras e JSON com núcleos, missões, alertas e militantes.</span></div>
+</div></div></section>
+<footer><div class="w">Proposta de direção visual. Nomes e limites de distritos e subprefeituras são reais; números, pessoas, núcleos, missões e alertas são fictícios. Não usa marcas, ícones ou artes da Paradox, do Google, da Prefeitura de São Paulo ou do Partido Missão.</div></footer>
+</body></html>
