@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "types": ["node", "geojson"]
+    "types": ["node", "vite/client", "geojson"]
   },
   "include": ["vite.config.ts", "playwright.config.ts", "tests", "scripts/*.ts"]
 }

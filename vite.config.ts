@@ -5,6 +5,8 @@ import { precomprimir } from './scripts/precomprimir.ts';
 
 export default defineConfig({
   plugins: [react(), precomprimir()],
+  // No GitHub Pages o app fica em /cidade-missao/; localmente, na raiz.
+  base: process.env.BASE_PATH ?? '/',
   server: { port: 5173 },
   build: {
     rollupOptions: {

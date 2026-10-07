@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- fontes (Gloock, Alegreya Sans, Alegreya Sans SC) são injetadas depois do primeiro desenho do mapa: src/map/MapView.tsx -->
     <!-- dados carregados em paralelo com o JavaScript (primeira interação no celular) -->
-    <link rel="preload" href="/dados/sp_distritos_ficticio.geojson" as="fetch" crossorigin="anonymous" />
-    <link rel="preload" href="/dados/cidade_missao_ficticio.json" as="fetch" crossorigin="anonymous" />
-    <link rel="preload" href="/dados/sp_subprefeituras.geojson" as="fetch" crossorigin="anonymous" />
-    <link rel="preload" href="/dados/fundo_esquematico.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="%BASE_URL%dados/sp_distritos_ficticio.geojson" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="%BASE_URL%dados/cidade_missao_ficticio.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="%BASE_URL%dados/sp_subprefeituras.geojson" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="%BASE_URL%dados/fundo_esquematico.json" as="fetch" crossorigin="anonymous" />
     <style>.carregando{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#111916;color:#EFE8D8;font-family:'Alegreya Sans',system-ui,sans-serif}</style>
   </head>
   <body>

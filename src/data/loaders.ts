@@ -59,7 +59,7 @@ export function montarDados(raw: DadosBrutos, distGeo: FeatureCollectionLike, su
 
 let cache: Promise<Dados> | null = null;
 /** Carrega uma vez só (o StrictMode do React executa efeitos duas vezes em desenvolvimento). */
-export function carregarDados(base = '/dados/'): Promise<Dados> {
+export function carregarDados(base = `${import.meta.env.BASE_URL}dados/`): Promise<Dados> {
   return (cache ??= carregar(base));
 }
 async function carregar(base: string): Promise<Dados> {
